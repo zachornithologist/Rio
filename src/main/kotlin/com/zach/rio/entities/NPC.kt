@@ -1,4 +1,4 @@
-package com.zach.rio.entities
+package main.kotlin.com.zach.rio.entities
 
 class NPC(x: Int, y: Int) : Entity(x, y, "src/main/resources/images/npc.png") {
     var dx = 1
