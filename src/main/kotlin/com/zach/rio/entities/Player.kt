@@ -1,17 +1,17 @@
 package main.kotlin.com.zach.rio.entities
 
-import java.awt.Image
-import javax.swing.ImageIcon
+class Player(x: Int, y: Int) : Entity(x, y, "src/main/resources/images/player.png") {
+    // Additional player-specific logic can go here
+    var dx = 0
+    var dy = 0
 
-abstract class Entity(var x: Int, var y: Int, imagePath: String) {
-    val sprite: Sprite = Sprite(imagePath)
-}
+    fun move() {
+        x += dx
+        y += dy
+    }
 
-class Sprite(imagePath: String) {
-    val image: Image
-
-    init {
-        val icon = ImageIcon(imagePath)
-        image = icon.image
+    fun setDirection(dx: Int, dy: Int) {
+        this.dx = dx
+        this.dy = dy
     }
 }
